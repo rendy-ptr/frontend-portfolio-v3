@@ -1,0 +1,227 @@
+{
+  "Internship": "Internship",
+  "Full-time": "Full-time",
+  "Freelance": "Freelance",
+  "Developed an integrated HRIS system, from Figma prototyping and database design to full implementation, effectively optimizing HR administration workflows through collaborative development.": "Developed an integrated HRIS system, from Figma prototyping and database design to full implementation, effectively optimizing HR administration workflows through collaborative development.",
+  "October 2025 — April 2026": "October 2025 — April 2026",
+  "Successfully completed an intensive programming internship focused on practical development skills and Agile methodologies to deliver effective technical solutions.": "Successfully completed an intensive programming internship focused on practical development skills and Agile methodologies to deliver effective technical solutions.",
+  "May 2023 — June 2023": "May 2023 — June 2023",
+  "A point-of-sale system for coffee shops with product and transaction management features.": "A point-of-sale system for coffee shops with product and transaction management features.",
+  "Tanya In is a platform for asking questions and sharing knowledge with other users.": "Tanya In is a platform for asking questions and sharing knowledge with other users.",
+  "POS & Inventory Management System": "POS & Inventory Management System",
+  "Tanya In — Forum Discussion": "Tanya In — Forum Discussion",
+  "Lumina": "Lumina",
+  "Lumina is a blogging platform for writing, reading, and sharing stories or ideas with other users.": "Lumina is a blogging platform for writing, reading, and sharing stories or ideas with other users.",
+  "Watch Party": "Watch Party",
+  "A web app for watching videos together in real time with friends.": "A web app for watching videos together in real time with friends.",
+  "Portfolio V2": "Portfolio V2",
+  "The first portfolio website I developed, featuring a neobrutalist design and a chatbot.": "The first portfolio website I developed, featuring a neobrutalist design and a chatbot.",
+  "Portfolio V1": "Portfolio V1",
+  "The first portfolio website I developed using a 3D concept": "The first portfolio website I developed using a 3D concept",
+  "Imsakiyah Schedule": "Imsakiyah Schedule",
+  "An interactive website for Ramadan fasting schedules.": "An interactive website for Ramadan fasting schedules.",
+  "QR Generator": "QR Generator",
+  "A website for creating and sharing QR codes with password protection.": "A website for creating and sharing QR codes with password protection.",
+  "Model Ethereum Fraud Detection": "Model Ethereum Fraud Detection",
+  "A study on the effectiveness of various machine learning models in detecting fraud on the Ethereum blockchain.": "A study on the effectiveness of various machine learning models in detecting fraud on the Ethereum blockchain.",
+  "Competency Certificate Junior Web Developer": "Competency Certificate Junior Web Developer",
+  "June, 2023 - June, 2026": "June, 2023 - June, 2026",
+  "Basics of artificial intelligence": "Basics of artificial intelligence",
+  "January, 2026 - January, 2029": "January, 2026 - January, 2029",
+  "Basics of data visualization": "Basics of data visualization",
+  "April, 2025 - April, 2028": "April, 2025 - April, 2028",
+  "Basics of Python Programming": "Basics of Python Programming",
+  "March, 2025 - March, 2028": "March, 2025 - March, 2028",
+  "Basics of machine learning": "Basics of machine learning",
+  "May, 2025 - May, 2028": "May, 2025 - May, 2028",
+  "Basics of Structured Query Language (SQL)": "Basics of Structured Query Language (SQL)",
+  "November, 2024 - November, 2027": "November, 2024 - November, 2027",
+  "Basics of Data Science": "Basics of Data Science",
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for Work",
+    "greeting": "Hi there, I'm",
+    "tagline": "Crafting digital experiences with code & creativity",
+    "contactBtn": "Get in Touch",
+    "downloadCV": "Download CV",
+    "stats": {
+      "yearsExp": "Years Experience",
+      "projects": "Projects Built",
+      "clients": "Happy Clients"
+    }
+  },
+  "about": {
+    "sectionLabel": "About",
+    "title": "About Me",
+    "bio": "Hey there! I'm a passionate Full Stack Developer who loves building beautiful, performant web applications. With a strong foundation in both frontend and backend technologies, I enjoy turning complex problems into elegant solutions. When I'm not coding, you'll find me exploring tech trends.",
+    "statisticTitle": "Quick Facts",
+    "totalCommits": "Total Commits",
+    "totalCodingHours": "Total Coding Hours",
+    "topLanguage": "Top Language",
+    "education": {
+      "title": "Education",
+      "degree": "Bachelor of Computer Science",
+      "institution": "University of Buana Perjuangan",
+      "year": "2021 — 2025"
+    }
+  },
+  "experience": {
+    "sectionLabel": "Career",
+    "title": "Work Experience"
+  },
+  "skills": {
+    "sectionLabel": "Expertise",
+    "title": "Skills & Technologies",
+    "terminalLabel": "Also worked with",
+    "categoryMeta": {
+      "frontend": "Building interfaces & experiences",
+      "backend": "APIs, databases & server logic",
+      "tools": "Workflow, deployment & design"
+    },
+    "levelLabels": {
+      "advanced": "Advanced",
+      "intermediate": "Intermediate",
+      "beginner": "Beginner"
+    }
+  },
+  "projects": {
+    "sectionLabel": "Portfolio",
+    "title": "Selected Projects",
+    "featured": "Featured",
+    "codeBtn": "Code",
+    "liveBtn": "Live",
+    "development": "In Development",
+    "comingSoon": "Live Coming Soon",
+    "showMore": "Show More Projects",
+    "showLess": "Show Less"
+  },
+  "certificate": {
+    "sectionLabel": "Credentials",
+    "title": "Certificates"
+  },
+  "contact": {
+    "sectionLabel": "Connect",
+    "title": "Get in Touch",
+    "intro": "Have a project in mind or just want to chat? I'm always open to new opportunities and collaborations. Let's build something great together!",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "findMe": "Find me on",
+    "form": {
+      "terminalLabel": "Send a Message",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "sendBtn": "Send Message",
+      "sentBtn": "Message Sent!"
+    }
+  },
+  "footer": {
+    "backToTop": "Back to top",
+    "builtWith": "Rendy.Dev"
+  },
+  "login": {
+    "backToPortfolio": "Back to portfolio",
+    "title": "Admin Sign In",
+    "subtitle": "Sign in to manage your portfolio content.",
+    "email": "Email",
+    "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "submit": "Sign In",
+    "submitting": "Signing in…",
+    "error": "Invalid email or password."
+  },
+  "dashboard": {
+    "adminPanel": "Admin Panel",
+    "viewSite": "View Site",
+    "signOut": "Sign Out",
+    "nav": {
+      "overview": "Overview",
+      "projects": "Projects",
+      "experience": "Experience",
+      "certificates": "Certificates",
+      "messages": "Messages"
+    },
+    "overview": {
+      "title": "Overview",
+      "subtitle": "Welcome back! Here's what's happening with your portfolio.",
+      "stats": {
+        "projects": "Projects",
+        "experience": "Experience",
+        "certificates": "Certificates",
+        "messages": "Messages"
+      },
+      "recentActivity": "Recent Activity",
+      "projectsGlance": "Projects at a Glance",
+      "featured": "Featured"
+    },
+    "projects": {
+      "title": "Projects",
+      "addBtn": "Add Project",
+      "featured": "Featured",
+      "editBtn": "Edit",
+      "deleteBtn": "Delete",
+      "addTitle": "Add Project",
+      "editTitle": "Edit Project",
+      "saveBtn": "Save Changes",
+      "cancelBtn": "Cancel",
+      "deleteConfirmTitle": "Delete project?",
+      "deleteConfirmBody": "This action cannot be undone.",
+      "fields": {
+        "title": "Title",
+        "titlePlaceholder": "Project name",
+        "github": "GitHub URL",
+        "live": "Live URL",
+        "image": "Image URL",
+        "description": "Description",
+        "tech": "Tech Stack (comma-separated)",
+        "techPlaceholder": "React, Node.js, MongoDB",
+        "featured": "Featured project"
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "addBtn": "Add Entry",
+      "editBtn": "Edit",
+      "deleteBtn": "Delete",
+      "addTitle": "Add Entry",
+      "editTitle": "Edit Entry",
+      "saveBtn": "Save Changes",
+      "cancelBtn": "Cancel",
+      "deleteConfirmTitle": "Delete entry?",
+      "deleteConfirmBody": "This action cannot be undone.",
+      "fields": {
+        "role": "Job Title",
+        "rolePlaceholder": "Senior Developer",
+        "company": "Company",
+        "companyPlaceholder": "ACME Corp",
+        "period": "Period",
+        "periodPlaceholder": "2023 — Present",
+        "type": "Type",
+        "typePlaceholder": "Full-time",
+        "description": "Description",
+        "tech": "Tech Stack (comma-separated)",
+        "techPlaceholder": "React, Node.js"
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "unread": "unread",
+      "empty": "No messages yet",
+      "replyBtn": "Reply via Email",
+      "deleteAriaLabel": "Delete"
+    }
+  }
+}

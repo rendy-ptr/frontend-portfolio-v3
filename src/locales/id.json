@@ -1,0 +1,228 @@
+{
+  "Internship": "Magang",
+  "Full-time": "Penuh Waktu",
+  "Freelance": "Lepas",
+  "Developed an integrated HRIS system, from Figma prototyping and database design to full implementation, effectively optimizing HR administration workflows through collaborative development.": "Mengembangkan sistem HRIS terintegrasi, mulai dari prototipe Figma dan desain basis data hingga implementasi penuh, secara efektif mengoptimalkan alur kerja administrasi SDM melalui pengembangan kolaboratif.",
+  "October 2025 — April 2026": "Oktober 2025 — April 2026",
+  "Successfully completed an intensive programming internship focused on practical development skills and Agile methodologies to deliver effective technical solutions.": "Berhasil menyelesaikan magang pemrograman intensif yang berfokus pada keterampilan pengembangan praktis dan metodologi Agile untuk memberikan solusi teknis yang efektif.",
+  "May 2023 — June 2023": "Mei 2023 — Juni 2023",
+  "A point-of-sale system for coffee shops with product and transaction management features.": "Sistem point-of-sale untuk kedai kopi dengan fitur manajemen produk dan transaksi.",
+  "Tanya In is a platform for asking questions and sharing knowledge with other users.": "Tanya In adalah platform untuk bertanya dan berbagi pengetahuan dengan pengguna lain.",
+  "POS & Inventory Management System": "Sistem Point of Sale & Manajemen Inventaris",
+  "Tanya In — Forum Discussion": "Tanya In — Diskusi Forum",
+  "Lumina": "Lumina",
+  "Lumina is a blogging platform for writing, reading, and sharing stories or ideas with other users.": "Lumina adalah platform blogging untuk menulis, membaca, dan berbagi cerita atau ide dengan pengguna lain.",
+  "Watch Party": "Watch Party",
+  "A web app for watching videos together in real time with friends.": "Aplikasi web untuk menonton video bersama teman secara real-time.",
+  "Portfolio V2": "Portofolio V2",
+  "The first portfolio website I developed, featuring a neobrutalist design and a chatbot.": "Website portofolio pertama yang saya kembangkan, menampilkan desain neobrutalism dan chatbot.",
+  "Portfolio V1": "Portofolio V1",
+  "The first portfolio website I developed using a 3D concept": "Website portofolio pertama yang saya kembangkan menggunakan konsep 3D",
+  "Imsakiyah Schedule": "Jadwal Imsakiyah",
+  "An interactive website for Ramadan fasting schedules.": "Website interaktif untuk jadwal puasa Ramadan.",
+  "QR Generator": "Generator QR",
+  "A website for creating and sharing QR codes with password protection.": "Website untuk membuat dan berbagi kode QR dengan perlindungan kata sandi.",
+  "Model Ethereum Fraud Detection": "Model Deteksi Penipuan Ethereum",
+  "A study on the effectiveness of various machine learning models in detecting fraud on the Ethereum blockchain.": "Studi tentang efektivitas berbagai model machine learning dalam mendeteksi penipuan di blockchain Ethereum.",
+  "Competency Certificate Junior Web Developer": "Sertifikat Kompetensi Junior Web Developer",
+  "June, 2023 - June, 2026": "Juni, 2023 - Juni, 2026",
+  "Basics of artificial intelligence": "Dasar-dasar kecerdasan buatan",
+  "January, 2026 - January, 2029": "Januari, 2026 - Januari, 2029",
+  "Basics of data visualization": "Dasar-dasar visualisasi data",
+  "April, 2025 - April, 2028": "April, 2025 - April, 2028",
+  "Basics of Python Programming": "Dasar-dasar Pemrograman Python",
+  "March, 2025 - March, 2028": "Maret, 2025 - Maret, 2028",
+  "Basics of machine learning": "Dasar-dasar machine learning",
+  "May, 2025 - May, 2028": "Mei, 2025 - Mei, 2028",
+  "Basics of Structured Query Language (SQL)": "Dasar-dasar Structured Query Language (SQL)",
+  "November, 2024 - November, 2027": "November, 2024 - November, 2027",
+  "Basics of Data Science": "Dasar-dasar Data Science",
+
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "certificates": "Sertifikat",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "available": "Tersedia untuk Bekerja",
+    "greeting": "Halo, saya",
+    "tagline": "Membangun pengalaman digital dengan kode & kreativitas",
+    "contactBtn": "Hubungi Saya",
+    "downloadCV": "Unduh CV",
+    "stats": {
+      "yearsExp": "Tahun Pengalaman",
+      "projects": "Proyek Dibuat",
+      "clients": "Klien Puas"
+    }
+  },
+  "about": {
+    "sectionLabel": "Tentang",
+    "title": "Tentang Saya",
+    "bio": "Hai! Saya seorang Full Stack Developer yang bersemangat dan suka membangun aplikasi web yang indah dan berperforma tinggi. Dengan fondasi kuat di frontend dan backend, saya menikmati mengubah masalah kompleks menjadi solusi elegan. Saat tidak coding, saya suka eksplorasi tren teknologi.",
+    "statisticTitle": "Fakta Singkat",
+    "totalCommits": "Total Commits",
+    "totalCodingHours": "Total Jam Coding",
+    "topLanguage": "Bahasa Favorit",
+    "education": {
+      "title": "Pendidikan",
+      "degree": "Sarjana Ilmu Komputer",
+      "institution": "Universitas Buana Perjuangan",
+      "year": "2021 — 2025"
+    }
+  },
+  "experience": {
+    "sectionLabel": "Karir",
+    "title": "Pengalaman Kerja"
+  },
+  "skills": {
+    "sectionLabel": "Keahlian",
+    "title": "Keahlian & Teknologi",
+    "terminalLabel": "Juga berpengalaman dengan",
+    "categoryMeta": {
+      "frontend": "Membangun antarmuka & pengalaman",
+      "backend": "API, basis data & logika server",
+      "tools": "Workflow, deployment & desain"
+    },
+    "levelLabels": {
+      "advanced": "Lanjutan",
+      "intermediate": "Menengah",
+      "beginner": "Pemula"
+    }
+  },
+  "projects": {
+    "sectionLabel": "Portofolio",
+    "title": "Proyek Pilihan",
+    "featured": "Unggulan",
+    "codeBtn": "Kode",
+    "liveBtn": "Demo",
+    "development": "Dalam Pengembangan",
+    "comingSoon": "Demo Segera Hadir",
+    "showMore": "Lihat Proyek Lainnya",
+    "showLess": "Sembunyikan"
+  },
+  "certificate": {
+    "sectionLabel": "Kredensial",
+    "title": "Sertifikat"
+  },
+  "contact": {
+    "sectionLabel": "Hubungi",
+    "title": "Hubungi Saya",
+    "intro": "Punya proyek atau sekadar ingin ngobrol? Saya selalu terbuka untuk peluang dan kolaborasi baru. Ayo bangun sesuatu yang keren bersama!",
+    "emailLabel": "Email",
+    "locationLabel": "Lokasi",
+    "findMe": "Temukan saya di",
+    "form": {
+      "terminalLabel": "Kirim Pesan",
+      "nameLabel": "Nama Anda",
+      "namePlaceholder": "Budi Santoso",
+      "emailLabel": "Alamat Email",
+      "emailPlaceholder": "budi@contoh.com",
+      "messageLabel": "Pesan",
+      "messagePlaceholder": "Ceritakan tentang proyek Anda...",
+      "sendBtn": "Kirim Pesan",
+      "sentBtn": "Pesan Terkirim!"
+    }
+  },
+  "footer": {
+    "backToTop": "Kembali ke atas",
+    "builtWith": "Rendy.Dev"
+  },
+  "login": {
+    "backToPortfolio": "Kembali ke portofolio",
+    "title": "Masuk Admin",
+    "subtitle": "Masuk untuk mengelola konten portofolio Anda.",
+    "demo": "Demo: admin@portfolio.dev / admin123",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "showPassword": "Tampilkan kata sandi",
+    "hidePassword": "Sembunyikan kata sandi",
+    "submit": "Masuk",
+    "submitting": "Sedang masuk…",
+    "error": "Email atau kata sandi salah."
+  },
+  "dashboard": {
+    "adminPanel": "Panel Admin",
+    "viewSite": "Lihat Situs",
+    "signOut": "Keluar",
+    "nav": {
+      "overview": "Ringkasan",
+      "projects": "Proyek",
+      "experience": "Pengalaman",
+      "certificates": "Sertifikat",
+      "messages": "Pesan"
+    },
+    "overview": {
+      "title": "Ringkasan",
+      "subtitle": "Selamat datang kembali! Ini yang terjadi dengan portofolio Anda.",
+      "stats": {
+        "projects": "Proyek",
+        "experience": "Pengalaman",
+        "certificates": "Sertifikat",
+        "messages": "Pesan"
+      },
+      "recentActivity": "Aktivitas Terbaru",
+      "projectsGlance": "Ringkasan Proyek",
+      "featured": "Unggulan"
+    },
+    "projects": {
+      "title": "Proyek",
+      "addBtn": "Tambah Proyek",
+      "featured": "Unggulan",
+      "editBtn": "Edit",
+      "deleteBtn": "Hapus",
+      "addTitle": "Tambah Proyek",
+      "editTitle": "Edit Proyek",
+      "saveBtn": "Simpan Perubahan",
+      "cancelBtn": "Batal",
+      "deleteConfirmTitle": "Hapus proyek?",
+      "deleteConfirmBody": "Tindakan ini tidak dapat dibatalkan.",
+      "fields": {
+        "title": "Judul",
+        "titlePlaceholder": "Nama proyek",
+        "github": "URL GitHub",
+        "live": "URL Live",
+        "image": "URL Gambar",
+        "description": "Deskripsi",
+        "tech": "Stack Teknologi (pisahkan dengan koma)",
+        "techPlaceholder": "React, Node.js, MongoDB",
+        "featured": "Proyek unggulan"
+      }
+    },
+    "experience": {
+      "title": "Pengalaman",
+      "addBtn": "Tambah Entri",
+      "editBtn": "Edit",
+      "deleteBtn": "Hapus",
+      "addTitle": "Tambah Entri",
+      "editTitle": "Edit Entri",
+      "saveBtn": "Simpan Perubahan",
+      "cancelBtn": "Batal",
+      "deleteConfirmTitle": "Hapus entri?",
+      "deleteConfirmBody": "Tindakan ini tidak dapat dibatalkan.",
+      "fields": {
+        "role": "Jabatan",
+        "rolePlaceholder": "Senior Developer",
+        "company": "Perusahaan",
+        "companyPlaceholder": "PT ACME",
+        "period": "Periode",
+        "periodPlaceholder": "2023 — Sekarang",
+        "type": "Tipe",
+        "typePlaceholder": "Full-time",
+        "description": "Deskripsi",
+        "tech": "Stack Teknologi (pisahkan dengan koma)",
+        "techPlaceholder": "React, Node.js"
+      }
+    },
+    "messages": {
+      "title": "Pesan",
+      "unread": "belum dibaca",
+      "empty": "Belum ada pesan",
+      "replyBtn": "Balas lewat Email",
+      "deleteAriaLabel": "Hapus"
+    }
+  }
+}
