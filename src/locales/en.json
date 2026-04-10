@@ -72,7 +72,9 @@
       "degree": "Bachelor of Computer Science",
       "institution": "University of Buana Perjuangan",
       "year": "2021 — 2025"
-    }
+    },
+    "loading": "Loading data...",
+    "error": "Failed to load data"
   },
   "experience": {
     "sectionLabel": "Career",
@@ -124,7 +126,9 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Tell me about your project...",
       "sendBtn": "Send Message",
-      "sentBtn": "Message Sent!"
+      "sendingBtn": "Sending...",
+      "sentBtn": "Message Sent!",
+      "errorMsg": "Failed to send message. Please try again later."
     }
   },
   "footer": {

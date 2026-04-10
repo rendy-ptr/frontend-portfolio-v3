@@ -2,7 +2,6 @@ import { useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FiExternalLink } from "react-icons/fi";
 import { LangDropdown } from "../../components/LangDropdown";
 import { ThemeToggle } from "../../components/ThemeToggle";
 import { MenuIcon } from "@/components/ui/menu";
@@ -28,7 +27,7 @@ export default function DashboardLayout() {
         fontFamily: "var(--font-body)",
       }}
     >
-      {/* ── Sidebar ── */}
+
       <motion.aside
         animate={{ width: sidebarW }}
         transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
@@ -46,7 +45,7 @@ export default function DashboardLayout() {
           overflow: "hidden",
         }}
       >
-        {/* Logo + toggle */}
+
         <div
           className="flex items-center"
           style={{
@@ -121,7 +120,7 @@ export default function DashboardLayout() {
           </button>
         </div>
 
-        {/* Nav */}
+
         <nav
           className="flex flex-col gap-1"
           style={{ padding: "16px 10px", flex: 1, overflowY: "auto" }}
@@ -165,7 +164,7 @@ export default function DashboardLayout() {
           ))}
         </nav>
 
-        {/* Footer */}
+
         <div
           style={{
             padding: "12px 10px",
@@ -265,7 +264,7 @@ export default function DashboardLayout() {
         </div>
       </motion.aside>
 
-      {/* ── Main area ── */}
+
       <div
         style={{
           flex: 1,
@@ -276,7 +275,7 @@ export default function DashboardLayout() {
           minHeight: "100vh",
         }}
       >
-        {/* Top header */}
+
         <div
           className="flex items-center justify-end"
           style={{
@@ -292,7 +291,7 @@ export default function DashboardLayout() {
           <ThemeToggle />
         </div>
 
-        {/* Page content */}
+
         <div style={{ flex: 1 }}>
           <Outlet />
         </div>

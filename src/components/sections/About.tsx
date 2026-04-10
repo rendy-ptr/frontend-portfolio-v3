@@ -50,19 +50,32 @@ export default function About() {
       text: "",
     },
   });
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const fetchCommits = async () => {
-      const githubData = await getGithubCommits();
-      const wakatimeData = await getWakatimeStats();
-      if (githubData) {
-        setCommits(githubData);
-      }
-      if (wakatimeData) {
-        setWakatimeStats(wakatimeData);
+    const fetchData = async () => {
+      setIsLoading(true);
+      setIsError(false);
+      try {
+        const [githubData, wakatimeData] = await Promise.all([
+          getGithubCommits(),
+          getWakatimeStats(),
+        ]);
+        if (githubData) {
+          setCommits(githubData);
+        }
+        if (wakatimeData) {
+          setWakatimeStats(wakatimeData);
+        }
+      } catch (err) {
+        console.error("Error fetching about data:", err);
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
-    fetchCommits();
+    fetchData();
   }, []);
 
   const funFacts = [
@@ -136,48 +149,121 @@ export default function About() {
                 {t("about.statisticTitle")}
               </div>
               <div className="grid grid-cols-2 gap-3">
-                {funFacts.map((fact, i) => (
+                {isLoading ? (
+                  [...Array(3)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="card animate-pulse"
+                      style={{ padding: "16px 18px", height: 110 }}
+                    >
+                      <div
+                        className="mb-3"
+                        style={{
+                          width: 36,
+                          height: 36,
+                          background: "var(--accent-soft)",
+                          borderRadius: 8,
+                        }}
+                      />
+                      <div
+                        className="mb-2"
+                        style={{
+                          width: "60%",
+                          height: 12,
+                          background: "var(--border-color)",
+                          borderRadius: 4,
+                        }}
+                      />
+                      <div
+                        style={{
+                          width: "40%",
+                          height: 14,
+                          background: "var(--border-color)",
+                          borderRadius: 4,
+                        }}
+                      />
+                    </div>
+                  ))
+                ) : isError ? (
                   <div
-                    key={i}
-                    className="card"
-                    style={{ padding: "16px 18px" }}
+                    className="col-span-2 card flex flex-col items-center justify-center text-center"
+                    style={{ padding: "32px 24px" }}
                   >
                     <div
-                      className="flex items-center justify-center mb-3"
-                      style={{
-                        width: 36,
-                        height: 36,
-                        background: "var(--accent-soft)",
-                        color: "var(--accent)",
-                        borderRadius: 8,
-                      }}
+                      className="mb-3"
+                      style={{ color: "var(--text-subtle)", opacity: 0.5 }}
                     >
-                      {fact.icon}
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontSize: "var(--text-xs)",
-                        fontWeight: 600,
-                        color: "var(--text-subtle)",
-                        letterSpacing: "0.03em",
-                        textTransform: "uppercase" as const,
-                        marginBottom: 2,
-                      }}
-                    >
-                      {fact.label}
+                      <FolderCodeIcon size={32} />
                     </div>
                     <div
                       style={{
                         fontSize: "var(--text-sm)",
-                        fontWeight: 500,
-                        color: "var(--text)",
+                        color: "var(--text-muted)",
+                        marginBottom: 4,
                       }}
                     >
-                      {fact.value}
+                      {t("about.error")}
                     </div>
+                    <button
+                      onClick={() => window.location.reload()}
+                      style={{
+                        fontSize: "var(--text-xs)",
+                        color: "var(--accent)",
+                        fontWeight: 600,
+                        cursor: "pointer",
+                        background: "none",
+                        border: "none",
+                        padding: 0,
+                        textDecoration: "underline",
+                      }}
+                    >
+                      Try again
+                    </button>
                   </div>
-                ))}
+                ) : (
+                  funFacts.map((fact, i) => (
+                    <div
+                      key={i}
+                      className="card"
+                      style={{ padding: "16px 18px" }}
+                    >
+                      <div
+                        className="flex items-center justify-center mb-3"
+                        style={{
+                          width: 36,
+                          height: 36,
+                          background: "var(--accent-soft)",
+                          color: "var(--accent)",
+                          borderRadius: 8,
+                        }}
+                      >
+                        {fact.icon}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: "var(--font-display)",
+                          fontSize: "var(--text-xs)",
+                          fontWeight: 600,
+                          color: "var(--text-subtle)",
+                          letterSpacing: "0.03em",
+                          textTransform: "uppercase" as const,
+                          marginBottom: 2,
+                        }}
+                      >
+                        {fact.label}
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "var(--text-sm)",
+                          fontWeight: 500,
+                          color: "var(--text)",
+                        }}
+                      >
+                        {fact.value || "-"}
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             </motion.div>
 

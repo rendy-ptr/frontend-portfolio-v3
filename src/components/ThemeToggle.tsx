@@ -1,4 +1,4 @@
-import { useTheme } from "./Navbar";
+import { useTheme } from "../context/ThemeContext";
 import { SunIcon } from "./ui/sun";
 import { MoonIcon } from "./ui/moon";
 

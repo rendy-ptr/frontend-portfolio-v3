@@ -72,7 +72,9 @@
       "degree": "Sarjana Ilmu Komputer",
       "institution": "Universitas Buana Perjuangan",
       "year": "2021 — 2025"
-    }
+    },
+    "loading": "Memuat data...",
+    "error": "Gagal memuat data"
   },
   "experience": {
     "sectionLabel": "Karir",
@@ -124,7 +126,9 @@
       "messageLabel": "Pesan",
       "messagePlaceholder": "Ceritakan tentang proyek Anda...",
       "sendBtn": "Kirim Pesan",
-      "sentBtn": "Pesan Terkirim!"
+      "sendingBtn": "Mengirim...",
+      "sentBtn": "Pesan Terkirim!",
+      "errorMsg": "Gagal mengirim pesan. Silakan coba lagi nanti."
     }
   },
   "footer": {

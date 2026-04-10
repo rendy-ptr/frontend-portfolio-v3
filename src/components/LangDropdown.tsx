@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckIcon } from "./ui/icons";
+import { CheckIcon } from "./ui/check";
 import { LanguagesIcon } from "./ui/languages";
 
 const LANGUAGES = [

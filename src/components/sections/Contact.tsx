@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { sendEmail } from "../../api/email";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { personal } from "../../data/portfolio.tsx";
@@ -24,12 +25,27 @@ export default function Contact() {
   const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setForm({ name: "", email: "", message: "" });
+    if (loading) return;
+    
+    setLoading(true);
+    setError(null);
+    
+    try {
+      await sendEmail(form);
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setSent(false), 5000);
+    } catch (err) {
+      console.error(err);
+      setError(t("contact.form.errorMsg") || "Gagal mengirim pesan. Silakan coba lagi nanti.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const socials = [
@@ -73,7 +89,7 @@ export default function Contact() {
             className="contact-grid grid gap-12 items-start"
             style={{ gridTemplateColumns: "5fr 7fr" }}
           >
-            {/* Left — info */}
+
             <motion.div {...fadeUp} transition={{ delay: 0.15, duration: 0.5, ease }}>
               <p
                 className="mb-8"
@@ -193,7 +209,7 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Right — form */}
+
             <motion.form
               onSubmit={handleSubmit}
               {...fadeUp}
@@ -212,7 +228,7 @@ export default function Contact() {
                   {t("contact.form.terminalLabel") || "Send a Message"}
                 </h3>
 
-                {/* Name + Email row */}
+
                 <div
                   className="grid gap-4 mb-4"
                   style={{ gridTemplateColumns: "1fr 1fr" }}
@@ -270,7 +286,18 @@ export default function Contact() {
                   ))}
                 </div>
 
-                {/* Message */}
+
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-4 text-xs font-medium"
+                    style={{ color: "oklch(55% 0.22 25)" }}
+                  >
+                    {error}
+                  </motion.div>
+                )}
+
                 <div className="mb-6">
                   <label
                     htmlFor="message"
@@ -310,6 +337,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="btn-primary w-full justify-center"
                   style={
                     sent
@@ -317,11 +345,24 @@ export default function Contact() {
                           background: "var(--success)",
                           borderColor: "var(--success)",
                         }
-                      : {}
+                      : loading 
+                        ? { opacity: 0.7, cursor: "not-allowed" }
+                        : {}
                   }
                 >
                   <AnimatePresence mode="wait">
-                    {sent ? (
+                    {loading ? (
+                      <motion.span
+                        key="loading"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="inline-flex items-center gap-2"
+                      >
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        {t("contact.form.sendingBtn") || "Sending..."}
+                      </motion.span>
+                    ) : sent ? (
                       <motion.span
                         key="sent"
                         initial={{ opacity: 0, scale: 0.8 }}

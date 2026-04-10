@@ -4,36 +4,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
-  PALETTE — "Soft Sage & Slate"
-  ────────────────────────────────────────────────────────────────
-  Cool off-white      → Clean, airy, modern
-  Deep slate text      → Confident, readable, refined
-  Sage green accent    → Calm, trustworthy, fresh
-  Soft blue info       → Professional, approachable
-  ────────────────────────────────────────────────────────────────
-*/
 
-/* ── Light mode tokens ── */
+
+
 :root {
-  /* Backgrounds — cool, airy canvas */
+
   --bg: oklch(98% 0.004 240);
   --surface: oklch(99.5% 0.002 240);
   --surface-alt: oklch(96% 0.006 240);
   --border-color: oklch(91% 0.008 240);
 
-  /* Text — deep slate */
+
   --text: oklch(20% 0.015 250);
   --text-muted: oklch(44% 0.015 250);
   --text-subtle: oklch(58% 0.012 250);
 
-  /* Accent — soft sage green */
+
   --accent: oklch(50% 0.11 165);
   --accent-hover: oklch(43% 0.12 165);
   --accent-soft: oklch(94% 0.03 165);
   --accent-text: oklch(40% 0.10 165);
 
-  /* Semantic */
+
   --success: oklch(50% 0.12 155);
   --success-soft: oklch(94% 0.03 155);
   --info: oklch(52% 0.10 245);
@@ -41,11 +33,11 @@
   --warm: oklch(58% 0.12 85);
   --warm-soft: oklch(94% 0.03 85);
 
-  /* Typography */
+
   --font-display: "Outfit", system-ui, sans-serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;
 
-  /* Type scale — fluid with clamp */
+
   --text-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.75rem);
   --text-sm: clamp(0.8rem, 0.75rem + 0.2vw, 0.875rem);
   --text-base: clamp(0.95rem, 0.9rem + 0.2vw, 1rem);
@@ -55,13 +47,13 @@
   --text-3xl: clamp(2.25rem, 1.8rem + 2vw, 3.25rem);
   --text-hero: clamp(2.75rem, 2rem + 3vw, 4rem);
 
-  /* Shadows — cool-tinted */
+
   --shadow-xs: 0 1px 2px oklch(20% 0.01 250 / 0.04);
   --shadow-sm: 0 1px 3px oklch(20% 0.01 250 / 0.06), 0 1px 2px oklch(20% 0.01 250 / 0.04);
   --shadow-md: 0 4px 6px -1px oklch(20% 0.01 250 / 0.06), 0 2px 4px -2px oklch(20% 0.01 250 / 0.04);
   --shadow-lg: 0 10px 15px -3px oklch(20% 0.01 250 / 0.07), 0 4px 6px -4px oklch(20% 0.01 250 / 0.04);
 
-  /* Spacing — 4pt base */
+
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 12px;
@@ -72,10 +64,10 @@
   --space-3xl: 64px;
   --space-4xl: 96px;
 
-  /* Section spacing — varied rhythm */
+
   --section-gap: clamp(80px, 10vw, 120px);
 
-  /* Motion — refined timing */
+
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -92,7 +84,7 @@
   --radius: 0.625rem;
 }
 
-/* ── Dark mode tokens ── */
+
 .dark {
   --bg: oklch(14% 0.008 250);
   --surface: oklch(18% 0.01 250);
@@ -121,7 +113,7 @@
   --shadow-lg: 0 10px 15px -3px oklch(5% 0 0 / 0.35), 0 4px 6px -4px oklch(5% 0 0 / 0.2);
 }
 
-/* ── Base ── */
+
 html {
   scroll-behavior: smooth;
 }
@@ -153,7 +145,7 @@ a {
   text-decoration: none;
 }
 
-/* ── Focus — keyboard-only visible rings ── */
+
 *:focus {
   outline: none;
 }
@@ -163,7 +155,7 @@ a {
   outline-offset: 2px;
 }
 
-/* ── Scrollbar ── */
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -178,20 +170,20 @@ a {
   background: var(--text-subtle);
 }
 
-/* ── Selection ── */
+
 ::selection {
   background: var(--accent);
   color: oklch(99% 0.003 165);
 }
 
-/* ── Utility components ── */
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
 
-/* Section heading */
+
 .section-label {
   font-family: var(--font-display);
   font-size: var(--text-xs);
@@ -211,7 +203,7 @@ a {
   letter-spacing: -0.025em;
 }
 
-/* ── Buttons ── */
+
 .btn-primary {
   font-family: var(--font-display);
   font-size: var(--text-sm);
@@ -288,7 +280,7 @@ a {
   background: var(--accent-soft);
 }
 
-/* ── Cards ── */
+
 .card {
   background: var(--surface);
   border: 1px solid var(--border-color);
@@ -302,7 +294,7 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
-/* ── Tags / Pills ── */
+
 .tag {
   font-family: var(--font-display);
   font-size: var(--text-xs);
@@ -316,7 +308,7 @@ a {
   letter-spacing: 0.01em;
 }
 
-/* ── Responsive ── */
+
 @media (max-width: 768px) {
   .nav-desktop {
     display: none !important;
@@ -357,7 +349,7 @@ a {
   }
 }
 
-/* ── Animations ── */
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -368,7 +360,7 @@ a {
   50% { opacity: 0.4; }
 }
 
-/* ── Reduced motion ── */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -378,7 +370,7 @@ a {
   }
 }
 
-/* ── Tailwind v4 theme tokens ── */
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

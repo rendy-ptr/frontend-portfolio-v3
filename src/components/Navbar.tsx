@@ -1,47 +1,16 @@
-import { useState, useEffect, useRef, createContext, useContext } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { SunIcon } from "./ui/sun";
 import { MoonIcon } from "./ui/moon";
 import { LanguagesIcon } from "./ui/languages";
-import { MenuIcon, XIcon, CheckIcon } from "./ui/icons";
+import { useTheme } from "../context/ThemeContext";
+import i18n from "@/i18n";
+import { CheckIcon } from "./ui/check";
+import { MenuIcon } from "./ui/menu";
+import { XIcon } from "./ui/x";
 
-/* ── Theme context ── */
-export const ThemeContext = createContext({ dark: false, toggle: () => {} });
-export function useTheme() {
-  return useContext(ThemeContext);
-}
-
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [dark, setDark] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return (
-      localStorage.getItem("theme") === "dark" ||
-      (!localStorage.getItem("theme") &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    );
-  });
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (dark) {
-      root.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      root.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [dark]);
-
-  return (
-    <ThemeContext.Provider value={{ dark, toggle: () => setDark((d) => !d) }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
-
-/* ── Nav link ── */
 function NavLink({
   label,
   to,
@@ -145,7 +114,7 @@ function LangDropdown() {
         <span>{current.code.toUpperCase()}</span>
       </button>
 
-      {/* Dropdown */}
+
       <AnimatePresence>
         {open && (
           <motion.div
@@ -237,32 +206,33 @@ function LangDropdown() {
   );
 }
 
+const NAV_LINKS = [
+  { key: "nav.home", to: "hero" },
+  { key: "nav.about", to: "about" },
+  { key: "nav.experience", to: "experience" },
+  { key: "nav.skills", to: "skills" },
+  { key: "nav.projects", to: "projects" },
+  { key: "nav.certificates", to: "certificate" },
+  { key: "nav.contact", to: "contact" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const { dark, toggle } = useTheme();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const navLinks = [
-    { key: "nav.home", to: "hero" },
-    { key: "nav.about", to: "about" },
-    { key: "nav.experience", to: "experience" },
-    { key: "nav.skills", to: "skills" },
-    { key: "nav.projects", to: "projects" },
-    { key: "nav.certificates", to: "certificate" },
-    { key: "nav.contact", to: "contact" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      const sections = navLinks.map((l) => document.getElementById(l.to));
+      const sections = NAV_LINKS.map((l) => document.getElementById(l.to));
       const scrollY = window.scrollY + 100;
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = sections[i];
         if (el && el.offsetTop <= scrollY) {
-          setActiveSection(navLinks[i].to);
+          setActiveSection(NAV_LINKS[i].to);
           break;
         }
       }
@@ -290,7 +260,6 @@ export default function Navbar() {
         className="container flex items-center justify-between"
         style={{ height: 64 }}
       >
-        {/* Logo */}
         <Link
           to="hero"
           smooth
@@ -312,9 +281,8 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <ul className="nav-desktop flex list-none gap-0.5 items-center">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.to}>
               <NavLink
                 label={t(link.key)}
@@ -325,11 +293,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Right actions */}
         <div className="flex items-center gap-1">
           <LangDropdown />
 
-          {/* Dark mode toggle */}
           <button
             onClick={toggle}
             className="flex items-center justify-center cursor-pointer"
@@ -357,7 +323,6 @@ export default function Navbar() {
             {dark ? <SunIcon size={18} /> : <MoonIcon size={18} />}
           </button>
 
-          {/* Hamburger (mobile) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="nav-hamburger hidden items-center justify-center cursor-pointer"
@@ -376,7 +341,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -393,7 +357,7 @@ export default function Navbar() {
                 borderTop: "1px solid var(--border-color)",
               }}
             >
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
@@ -425,7 +389,6 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              {/* Mobile lang switcher row */}
               <div
                 className="flex gap-2 mt-3 pt-3"
                 style={{ borderTop: "1px solid var(--border-color)" }}

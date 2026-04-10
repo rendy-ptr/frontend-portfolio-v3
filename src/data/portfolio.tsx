@@ -14,6 +14,7 @@ import { TerminalIcon } from "@/components/ui/terminal";
 import { ChartColumnIncreasingIcon } from "@/components/ui/chart-column-increasing";
 import { BrainIcon } from "@/components/ui/brain";
 import { FileCheck2Icon } from "@/components/ui/file-check-2";
+import cvRendy from "../assets/pdf/CV-RENDY.pdf";
 
 export const personal = {
   name: "Rendy Putra",
@@ -22,7 +23,7 @@ export const personal = {
   email: "rendyworksspace@email.com",
   availableForWork: true,
   avatar: profileImg,
-  cv: "/cv.pdf",
+  cv: cvRendy,
   socials: {
     github: "https://github.com/rendy-ptr",
     linkedin: "https://linkedin.com/in/rendy-putra/",

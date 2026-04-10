@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ThemeProvider } from "../components/Navbar";
+import { ThemeProvider } from "../context/ThemeProvider";
 import LoginPage from "../pages/LoginPage";
 import DashboardLayout from "../pages/dashboard/DashboardLayout";
 import Overview from "../pages/dashboard/pages/Overview";
