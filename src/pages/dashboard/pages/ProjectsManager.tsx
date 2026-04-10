@@ -22,6 +22,8 @@ const empty: Omit<Project, "id"> = {
   tech: [],
   github: "",
   live: "",
+  isLive: false,
+  isDevelopment: false,
   featured: false,
   color: "#7C3AED",
 };
@@ -563,33 +565,91 @@ export default function ProjectsManager() {
                     />
                   </div>
 
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={form.featured}
-                      onChange={(e) =>
-                        setForm((prev) => ({
-                          ...prev,
-                          featured: e.target.checked,
-                        }))
-                      }
-                      style={{
-                        width: 16,
-                        height: 16,
-                        accentColor: "var(--accent)",
-                      }}
-                    />
-                    <span
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontSize: "var(--text-sm)",
-                        fontWeight: 500,
-                        color: "var(--text)",
-                      }}
-                    >
-                      {t("dashboard.projects.fields.featured")}
-                    </span>
-                  </label>
+                    <label className="flex items-center gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={form.featured}
+                        onChange={(e) =>
+                          setForm((prev) => ({
+                            ...prev,
+                            featured: e.target.checked,
+                          }))
+                        }
+                        style={{
+                          width: 16,
+                          height: 16,
+                          accentColor: "var(--accent)",
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontFamily: "var(--font-display)",
+                          fontSize: "var(--text-sm)",
+                          fontWeight: 500,
+                          color: "var(--text)",
+                        }}
+                      >
+                        {t("dashboard.projects.fields.featured")}
+                      </span>
+                    </label>
+
+                    <div className="flex gap-6">
+                      <label className="flex items-center gap-3 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={form.isLive}
+                          onChange={(e) =>
+                            setForm((prev) => ({
+                              ...prev,
+                              isLive: e.target.checked,
+                            }))
+                          }
+                          style={{
+                            width: 16,
+                            height: 16,
+                            accentColor: "var(--accent)",
+                          }}
+                        />
+                        <span
+                          style={{
+                            fontFamily: "var(--font-display)",
+                            fontSize: "var(--text-sm)",
+                            fontWeight: 500,
+                            color: "var(--text)",
+                          }}
+                        >
+                          Live
+                        </span>
+                      </label>
+
+                      <label className="flex items-center gap-3 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={form.isDevelopment}
+                          onChange={(e) =>
+                            setForm((prev) => ({
+                              ...prev,
+                              isDevelopment: e.target.checked,
+                            }))
+                          }
+                          style={{
+                            width: 16,
+                            height: 16,
+                            accentColor: "var(--accent)",
+                          }}
+                        />
+                        <span
+                          style={{
+                            fontFamily: "var(--font-display)",
+                            fontSize: "var(--text-sm)",
+                            fontWeight: 500,
+                            color: "var(--text)",
+                          }}
+                        >
+                          Development
+                        </span>
+                      </label>
+                    </div>
                 </div>
               </div>
 
