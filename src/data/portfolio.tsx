@@ -48,7 +48,7 @@ export const experiences = [
     id: 2,
     company: "PT. Jidoka System Indonesia",
     role: "Technical Odoo Developer",
-    period: "May 2023 — June 2023",
+    period: "March 2023 — June 2023",
     type: "Internship",
     description:
       "Successfully completed an intensive programming internship focused on practical development skills and Agile methodologies to deliver effective technical solutions.",
