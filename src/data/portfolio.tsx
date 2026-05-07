@@ -15,6 +15,7 @@ import { ChartColumnIncreasingIcon } from "@/components/ui/chart-column-increasi
 import { BrainIcon } from "@/components/ui/brain";
 import { FileCheck2Icon } from "@/components/ui/file-check-2";
 import cvRendy from "../assets/pdf/CV-RENDY.pdf";
+import wevinImg from "../assets/image/wevin.png";
 
 export const personal = {
   name: "Rendy Putra",
@@ -99,12 +100,19 @@ export const skillCategories = [
 export const projects = [
   {
     id: 1,
-    title: "POS & Inventory Management System",
+    title: "SAAS (Software As A Service) For Weeding Invitation System",
     description:
-      "A point-of-sale system for coffee shops with product and transaction management features.",
-    image: aromaCoffeeImg,
-    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "Prisma", "PostgreSQL"],
-    github: "https://github.com/rendy-ptr/pos-coffee-backend",
+      "A digital wedding invitation platform to make it easier for couples to create, customize, and share wedding invitations with their guests in style.",
+    image: wevinImg,
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Bun.js",
+      "PostgreSQL",
+      "Drizzle ORM",
+    ],
+    github: "https://github.com/rendy-ptr/wevin",
     isLive: false,
     live: "#",
     isDevelopment: true,
@@ -113,6 +121,28 @@ export const projects = [
   },
   {
     id: 2,
+    title: "POS (Point of Sale) & Inventory Management System",
+    description:
+      "A point-of-sale system for coffee shops with product and transaction management features.",
+    image: aromaCoffeeImg,
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    github: "https://github.com/rendy-ptr/pos-coffee-backend",
+    isLive: false,
+    live: "#",
+    isDevelopment: true,
+    featured: true,
+    color: "#7C3AED",
+  },
+  {
+    id: 3,
     title: "Tanya In — Forum Discussion",
     description:
       "Tanya In is a platform for asking questions and sharing knowledge with other users.",
@@ -122,11 +152,11 @@ export const projects = [
     isLive: false,
     live: "#",
     isDevelopment: false,
-    featured: true,
+    featured: false,
     color: "#06B6D4",
   },
   {
-    id: 3,
+    id: 4,
     title: "Lumina",
     description:
       "Lumina is a blogging platform for writing, reading, and sharing stories or ideas with other users.",
@@ -140,7 +170,7 @@ export const projects = [
     color: "#F59E0B",
   },
   {
-    id: 4,
+    id: 5,
     title: "Watch Party",
     description:
       "A web app for watching videos together in real time with friends.",
@@ -154,7 +184,7 @@ export const projects = [
     color: "#F43F5E",
   },
   {
-    id: 5,
+    id: 6,
     title: "Portfolio V2",
     description:
       "The first portfolio website I developed, featuring a neobrutalist design and a chatbot.",
@@ -168,7 +198,7 @@ export const projects = [
     color: "#7C3AED",
   },
   {
-    id: 6,
+    id: 7,
     title: "Portfolio V1",
     description: "The first portfolio website I developed using a 3D concept",
     image: portfolioV1Img,
@@ -181,7 +211,7 @@ export const projects = [
     color: "#06B6D4",
   },
   {
-    id: 7,
+    id: 8,
     title: "Imsakiyah Schedule",
     description: "An interactive website for Ramadan fasting schedules.",
     image: imsakiyahScheduleImg,
@@ -194,11 +224,19 @@ export const projects = [
     color: "#F59E0B",
   },
   {
-    id: 8,
+    id: 9,
     title: "QR Generator",
-    description: "A website for creating and sharing QR codes with password protection.",
+    description:
+      "A website for creating and sharing QR codes with password protection.",
     image: qrGeneratorImg,
-    tech: ["React", "TypeScript", "Tailwind CSS", "Bun.js", "Hono.js", "PostgreSQL"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Bun.js",
+      "Hono.js",
+      "PostgreSQL",
+    ],
     github: "https://github.com/rendy-ptr/qrku",
     live: "#",
     featured: false,
@@ -207,18 +245,26 @@ export const projects = [
     color: "#F43F5E",
   },
   {
-    id: 9,
+    id: 10,
     title: "Model Ethereum Fraud Detection",
-    description: "A study on the effectiveness of various machine learning models in detecting fraud on the Ethereum blockchain.",
+    description:
+      "A study on the effectiveness of various machine learning models in detecting fraud on the Ethereum blockchain.",
     image: null,
-    tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    tech: [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+    ],
     github: "https://github.com/rendy-ptr/ethereum-fraud-detection",
     live: "#",
     featured: false,
     isLive: false,
     isDevelopment: false,
     color: "#7C3AED",
-  }
+  },
 ];
 
 export const certificates = [
@@ -291,5 +337,5 @@ export const certificates = [
     color: "#F59E0B",
     icon: ChartSplineIcon,
     url: "https://www.dicoding.com/certificates/GRX54JV7YP0M",
-  }
+  },
 ];
