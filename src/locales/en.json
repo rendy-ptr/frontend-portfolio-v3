@@ -67,6 +67,7 @@
     "totalCommits": "Total Commits",
     "totalCodingHours": "Total Coding Hours",
     "topLanguage": "Top Language",
+    "totalSolved": "Leetcode Solved",
     "education": {
       "title": "Education",
       "degree": "Bachelor of Computer Science",
